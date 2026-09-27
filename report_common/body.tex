@@ -145,7 +145,11 @@ The metrics of Eqs.~\eqref{eq:metrics1} and~\eqref{eq:metrics2} are computed on 
 
 \subsection{Reproducibility}
 
-All results come from the single script \texttt{202510630\_Bahaa\_Karawia.py} (Appendix~\ref{app:code}), run with Python~\pyver, NumPy~\npver~\cite{harris2020}, SciPy~\spver~\cite{virtanen2020}, scikit-learn~\skver~\cite{pedregosa2011}, Matplotlib~\mplver~\cite{hunter2007} and pandas~\pdver~\cite{mckinney2010}. The master seed is 7, and every random draw derives from it through fixed offsets set in the configuration block. The command \texttt{python 202510630\_Bahaa\_Karawia.py} writes every figure and table of this report to \texttt{./outputs} in about two minutes. The same unit-square design is used for both functions, so differences between Parts~A and~B come from the functions, not from the sampling. The workflow and parts of the code (LHS, RBF system, GP set-up) are adapted from the course notebook~\cite{ae541tutorial}.
+All results come from the single script \texttt{202510630\_Bahaa\_Karawia.py} (Appendix~\ref{app:code}), run with Python~\pyver, NumPy~\npver~\cite{harris2020}, SciPy~\spver~\cite{virtanen2020}, scikit-learn~\skver~\cite{pedregosa2011}, Matplotlib~\mplver~\cite{hunter2007} and pandas~\pdver~\cite{mckinney2010}. The master seed is 7, and every random draw derives from it through fixed offsets set in the configuration block. The command \texttt{python 202510630\_Bahaa\_Karawia.py} writes every figure and table of this report to \texttt{./outputs} in about two minutes. The same unit-square design is used for both functions, so differences between Parts~A and~B come from the functions, not from the sampling.
+
+The script, every generated figure and table, both versions of this report and the pinned package list (\texttt{requirements.txt}) are available in the public repository
+\begin{center}\repourl\end{center}
+\noindent One command rebuilds everything from scratch: \texttt{reproduce.ps1} on Windows or \texttt{reproduce.sh} on Linux and macOS. On every change to the repository, an automated GitHub Actions job reruns the study on a clean Linux machine and checks the fresh results against the committed ones. The workflow and parts of the code (LHS, RBF system, GP set-up) are adapted from the course notebook~\cite{ae541tutorial}.
 
 % ---------------------------------------------------------------------
 \section{Results, Part A: Rosenbrock Function}\label{sec:rosen}

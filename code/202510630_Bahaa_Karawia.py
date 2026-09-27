@@ -11,7 +11,8 @@ The workflow follows the course reference notebook
 adapted from it with acknowledgment.
 
 Run:   python 202510630_Bahaa_Karawia.py
-Needs: numpy, scipy, matplotlib, scikit-learn, pandas.
+Needs: numpy, scipy, matplotlib, scikit-learn, pandas (versions in requirements.txt).
+Repository: https://github.com/BahaaIbrahimK/AE541-Assignment1-Surrogate-Modeling
 Every figure and table in the report is written to ./outputs next to this file.
 """
 
