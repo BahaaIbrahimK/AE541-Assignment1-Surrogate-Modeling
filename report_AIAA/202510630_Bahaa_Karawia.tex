@@ -1,0 +1,61 @@
+% AE 541 Assignment 1 - AIAA journal manuscript (submission version).
+% Uses the official AIAA LaTeX template (new-aiaa.cls, new-aiaa.bst) in this folder.
+% The "journal" option gives the required single-column, double-spaced, 10-pt layout.
+\documentclass[journal]{new-aiaa}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{longtable,tabularx}
+\usepackage{xcolor}
+\usepackage{listings}
+\setlength\LTleft{0pt}
+
+\input{../report_common/setup.tex}
+\hypersetup{hidelinks}   % keep the links, drop the colored boxes around them
+
+\title{Surrogate Modeling of the Rosenbrock and Trid Functions:\\Construction, Validation, and Limits of Trust}
+
+\author{Bahaa Karawia\footnote{PhD Student, Aerospace Engineering Department; KFUPM ID 202510630. AE 541 Digital Twin in Modern Engineering, Assignment 1; assigned function (Part B): Trid function, 2 variables.}}
+\affil{King Fahd University of Petroleum and Minerals, Dhahran 31261, Saudi Arabia}
+
+\begin{document}
+
+\maketitle
+
+\begin{center}
+  \small\singlespacing
+  AE 541 Digital Twin in Modern Engineering \textbullet{} Assignment 1\\
+  Bahaa Karawia, KFUPM ID 202510630 \textbullet{} Assigned function: Trid (2 variables)
+\end{center}
+
+\begin{abstract}
+\input{../report_common/abstract.tex}
+\end{abstract}
+
+\section*{Nomenclature}
+
+{\renewcommand\arraystretch{1.0}
+\noindent\begin{longtable*}{@{}l @{\quad=\quad} l@{}}
+\input{../report_common/nomenclature.tex}
+\end{longtable*}}
+% longtable* steps the table counter although it has no caption
+\addtocounter{table}{-1}
+
+\input{../report_common/body.tex}
+
+\section*{Acknowledgments}
+\input{../report_common/acknowledgments.tex}
+
+\bibliography{../report_common/references}
+
+\clearpage
+\appendix
+\section{Complete Python Code}\label{app:code}
+The listing below is the complete file \texttt{202510630\_Bahaa\_Karawia.py}; running it reproduces every figure, table and number in this report.
+\begin{singlespace}
+\lstinputlisting[style=pythoncode]{../code/202510630_Bahaa_Karawia.py}
+\end{singlespace}
+
+\end{document}

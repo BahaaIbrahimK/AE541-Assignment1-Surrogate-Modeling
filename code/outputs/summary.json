@@ -1,0 +1,236 @@
+{
+  "environment": {
+    "python": "3.11.9",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.6",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "seed": 7
+  },
+  "rosenbrock": {
+    "function": "Rosenbrock",
+    "bounds": [
+      [
+        -2.0,
+        2.0
+      ],
+      [
+        -2.0,
+        2.0
+      ]
+    ],
+    "truth": {
+      "f_at_known_min": 0.0,
+      "grid_min": 0.005903684494355779,
+      "grid_max": 3609.0,
+      "grid_mean": 468.74602752618597,
+      "grid_std": 624.163081718956
+    },
+    "doe": {
+      "Uniform random": 0.022928859161807473,
+      "LHS": 0.025059244801883068,
+      "Maximin LHS": 0.04515776574323175
+    },
+    "doe_realisations": {
+      "Uniform random": {
+        "median": 0.011514405746966832,
+        "mean": 0.01205424349437103,
+        "p05": 0.0035234693529993108,
+        "max": 0.0313173662771645
+      },
+      "LHS": {
+        "median": 0.021692415605876484,
+        "mean": 0.02204835612658326,
+        "p05": 0.010488317805111084,
+        "max": 0.04320404200335732
+      }
+    },
+    "split": {
+      "n_train": 45,
+      "n_test": 15,
+      "y_test_range": 1780.875595690987,
+      "corner_gaps": {
+        "(-2, -2)": 0.7444182815013615,
+        "(-2, 2)": 0.5673261920328806,
+        "(2, -2)": 0.2782911266747954,
+        "(2, 2)": 0.5454454294905298
+      }
+    },
+    "selected_degree": 4,
+    "coef_max_abs_diff": 3.836930773104541e-13,
+    "rbf_condition_number": 133847.3272059573,
+    "gp": {
+      "signal_variance_normalised": 10000.00000000001,
+      "length_scale_std": [
+        2.565691699052452,
+        23.39119063361958
+      ],
+      "length_scale_phys": [
+        3.110758093215503,
+        27.417542825838666
+      ],
+      "noise_variance_normalised": 1.1735940654626711e-12,
+      "log_marginal_likelihood": 197.76986572273933,
+      "parameters_at_bounds": [
+        "k1__k1__constant_value"
+      ],
+      "optimizer_runs": 9,
+      "abnormal_terminations": 3
+    },
+    "best_by_cv": "Polynomial",
+    "gp_uncertainty": {
+      "pearson": 0.6980602245558913,
+      "spearman": 0.671354084659106,
+      "coverage_2sigma": 0.9775694444444445,
+      "sigma_max": 0.24895026437737441,
+      "abs_err_max": 0.69885020955644,
+      "abs_err_max_outside_band": 0.69885020955644,
+      "centroid_outside_band": [
+        -1.4974633816374847,
+        -0.6143559591019071
+      ],
+      "sigma_floor": 0.006782890753607757,
+      "sigma_at_train_max": 0.007044853123354733,
+      "sigma_median_core": 0.005894147001114636
+    },
+    "core_area_fraction": 0.5625,
+    "optimisation": {
+      "n_starts": 20,
+      "cluster_tol": 0.08,
+      "true_function_nfev": 4424
+    },
+    "evaluations": {
+      "main_doe": 60,
+      "dense_grid": 14400,
+      "optimum_verification": 6,
+      "true_function_multistart": 4424,
+      "learning_curve": 1250,
+      "reduced_box": 45
+    }
+  },
+  "trid": {
+    "function": "Trid",
+    "bounds": [
+      [
+        -4.0,
+        4.0
+      ],
+      [
+        -4.0,
+        4.0
+      ]
+    ],
+    "truth": {
+      "f_at_known_min": -2.0,
+      "grid_min": -1.9997175340724527,
+      "grid_max": 50.0,
+      "grid_mean": 12.84593837535014,
+      "grid_std": 10.946976590040387
+    },
+    "doe": {
+      "Uniform random": 0.022928859161807473,
+      "LHS": 0.025059244801883068,
+      "Maximin LHS": 0.04515776574323175
+    },
+    "doe_realisations": {
+      "Uniform random": {
+        "median": 0.011514405746966832,
+        "mean": 0.01205424349437103,
+        "p05": 0.0035234693529993108,
+        "max": 0.0313173662771645
+      },
+      "LHS": {
+        "median": 0.021692415605876484,
+        "mean": 0.02204835612658326,
+        "p05": 0.010488317805111084,
+        "max": 0.04320404200335732
+      }
+    },
+    "split": {
+      "n_train": 45,
+      "n_test": 15,
+      "y_test_range": 28.065951462497274,
+      "corner_gaps": {
+        "(-4, -4)": 1.488836563002723,
+        "(-4, 4)": 1.1346523840657612,
+        "(4, -4)": 0.5565822533495908,
+        "(4, 4)": 1.0908908589810595
+      }
+    },
+    "selected_degree": 2,
+    "coef_max_abs_diff": 1.2434497875801753e-14,
+    "rbf_condition_number": 133847.3272059573,
+    "gp": {
+      "signal_variance_normalised": 10000.00000000001,
+      "length_scale_std": [
+        15.47100384481738,
+        15.868848808721223
+      ],
+      "length_scale_phys": [
+        37.515458648603556,
+        37.20074352987713
+      ],
+      "noise_variance_normalised": 1.872146499371748e-12,
+      "log_marginal_likelihood": 302.60341018308816,
+      "parameters_at_bounds": [
+        "k1__k1__constant_value"
+      ],
+      "optimizer_runs": 9,
+      "abnormal_terminations": 8
+    },
+    "hand_check": {
+      "x_hand": [
+        2.0,
+        2.0
+      ],
+      "f_hand": -2.0,
+      "hessian_eigenvalues": [
+        1.0,
+        3.0
+      ],
+      "x_from_fitted_quadratic": [
+        2.00000000000001,
+        2.000000000000005
+      ],
+      "fitted_hessian": [
+        [
+          2.0000000000000004,
+          -1.000000000000002
+        ],
+        [
+          -1.000000000000002,
+          2.000000000000004
+        ]
+      ]
+    },
+    "best_by_cv": "Polynomial",
+    "gp_uncertainty": {
+      "pearson": 0.683302591177479,
+      "spearman": 0.2692001889258565,
+      "coverage_2sigma": 1.0,
+      "sigma_max": 0.001486606214398455,
+      "abs_err_max": 0.0009574224073887194,
+      "abs_err_max_outside_band": 0.0,
+      "centroid_outside_band": null,
+      "sigma_floor": 0.00011646412049200278,
+      "sigma_at_train_max": 0.00011113851649579881,
+      "sigma_median_core": 7.463515264459735e-05
+    },
+    "core_area_fraction": 0.5625,
+    "optimisation": {
+      "n_starts": 20,
+      "cluster_tol": 0.16,
+      "true_function_nfev": 3315
+    },
+    "evaluations": {
+      "main_doe": 60,
+      "dense_grid": 14400,
+      "optimum_verification": 3,
+      "true_function_multistart": 3315,
+      "learning_curve": 1250,
+      "reduced_box": 45
+    }
+  }
+}

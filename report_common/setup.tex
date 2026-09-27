@@ -1,0 +1,31 @@
+% Shared macros for both report versions. Needs graphicx, listings, xcolor.
+\RequirePackage{adjustbox}
+\graphicspath{{../code/outputs/figures/}}
+
+% package versions printed by the script (outputs/summary.json)
+\newcommand{\pyver}{3.11.9}
+\newcommand{\npver}{2.4.6}
+\newcommand{\spver}{1.17.1}
+\newcommand{\skver}{1.9.1}
+\newcommand{\mplver}{3.11.2}
+\newcommand{\pdver}{3.0.6}
+
+\definecolor{codebg}{RGB}{248,248,248}
+\definecolor{codecomment}{RGB}{0,110,60}
+\definecolor{codekeyword}{RGB}{20,60,160}
+\definecolor{codestring}{RGB}{160,40,40}
+\lstdefinestyle{pythoncode}{
+  language=Python,
+  basicstyle=\ttfamily\scriptsize,
+  backgroundcolor=\color{codebg},
+  commentstyle=\color{codecomment}\itshape,
+  keywordstyle=\color{codekeyword}\bfseries,
+  stringstyle=\color{codestring},
+  numbers=left, numberstyle=\tiny\color{gray}, numbersep=6pt,
+  frame=single, rulecolor=\color{black!25},
+  breaklines=true, breakatwhitespace=false,
+  postbreak=\mbox{\textcolor{gray}{$\hookrightarrow$}\space},
+  showstringspaces=false, tabsize=4, columns=fullflexible, keepspaces=true,
+  upquote=true,
+  literate={φ}{{$\phi$}}1 {σ}{{$\sigma$}}1 {–}{{--}}1 {—}{{---}}1
+}

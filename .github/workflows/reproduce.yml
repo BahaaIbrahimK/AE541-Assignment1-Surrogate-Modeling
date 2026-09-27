@@ -1,0 +1,31 @@
+name: reproduce
+
+# Re-run the whole study on a clean machine and check that it gives the
+# results that are committed in code/outputs.
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pinned packages
+        run: pip install -r requirements.txt
+
+      - name: Keep the committed results as reference
+        run: cp code/outputs/summary.json /tmp/reference_summary.json
+
+      - name: Run the study from scratch
+        run: |
+          rm -rf code/outputs
+          python code/202510630_Bahaa_Karawia.py
+
+      - name: Compare with the committed results
+        run: python tools/compare_summary.py /tmp/reference_summary.json code/outputs/summary.json

@@ -1,0 +1,23 @@
+# course material and files that are not mine to publish
+Assignements/
+report_normal/Logos/
+00_Assignment_Review.md
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+code/run_log.txt
+
+# LaTeX build files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+report_AIAA/*.pdf
+report_AIAA/sample.bib
