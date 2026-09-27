@@ -87,6 +87,9 @@ python -m venv .venv
 - On the same machine, two runs produce identical numbers.
 - On a different operating system or CPU, the values that sit at round-off level (around $10^{-13}$, such as the polynomial errors) can change in their last digits. That is expected and means nothing.
 - A GitHub Actions workflow reruns the study from scratch on a clean Linux machine for every push. It then compares the fresh results with the committed ones, using `tools/compare_summary.py`.
+  - Everything agrees within 1%, except the GP uncertainty-versus-error correlations.
+  - Those correlations are built from quantities at their numerical floor, so they shift between platforms. For example, the Trid rank correlation is 0.27 on Windows and 0.20 on Linux.
+  - The checker gives them a wider tolerance, and the report discusses it.
 
 ## Notes
 
